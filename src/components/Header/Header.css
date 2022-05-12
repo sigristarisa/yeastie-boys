@@ -2,14 +2,16 @@
 
 header {
   border: 1px red solid;
-  height: 160px;
+  height: 25vh;
   padding: 36px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.title {
+.logo {
   margin: 0;
   font-family: "Archivo Black", sans-serif;
 }
