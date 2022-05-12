@@ -1,8 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 header {
   border: 1px red solid;
   height: 160px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .title {
   margin: 0;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.header--btn-wrapper {
+  width: 20vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.header--btn-wrapper > button {
+  width: 88px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  border: none;
+  font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
+}
+
+.header--btn-wrapper > button:hover {
+  border-bottom: 2px solid black;
 }
