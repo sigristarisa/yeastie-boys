@@ -1,12 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import Calculator from "./components/Calculator/Calculator";
+import Recipe from "./components/Recipe/Recipe";
 import "./index.css";
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Routes>
+        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/recipe" element={<Recipe />} />
+      </Routes>
     </div>
   );
 };

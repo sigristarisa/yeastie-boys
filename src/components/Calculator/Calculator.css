@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+html {
+  --brown: #834b20;
+  --yellow: #efa82c;
+  --blue: #3b6dc2;
+  --grey: #e9e6d6;
+}
+
+.calculator-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ingredients-wrapper {
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+}
+
+.doughweight-wrapper {
+  height: 15vh;
+}
+
+.ingredient {
+  height: 60%;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+
+.portion-wrapper {
+  width: 200px;
+  height: 64px;
+  margin: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 48px;
+  font-family: "Archivo Black", sans-serif;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.portion {
+  text-align: center;
+}
+
+.icon {
+  width: 32px;
+  margin: 2px 0 0 16px;
+}
+
+.starter {
+  background-color: var(--yellow);
+}
+
+.water {
+  background-color: var(--blue);
+}
+
+.salt {
+  background-color: var(--grey);
+}
+
+.flour {
+  background-color: var(--brown);
+}
+
+.doughweight-wrapper {
+  width: 100vw;
+  display: grid;
+  place-items: end;
+}
+
+.doughweight-wrapper > input {
+  width: 200px;
+  height: 64px;
+  margin: 20px;
+  color: black;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 48px;
+  font-family: "Archivo Black", sans-serif;
+}
