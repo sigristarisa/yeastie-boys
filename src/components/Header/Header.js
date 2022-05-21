@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ sourdough }) => {
   return (
     <header>
-      <h1 className="logo">YEASTIE BOYS</h1>
+      <h1 className="logo">{sourdough.starterName}</h1>
       <div className="header--btn-wrapper">
         <Link to="/">
           <button>Home</button>

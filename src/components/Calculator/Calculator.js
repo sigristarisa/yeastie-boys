@@ -1,10 +1,10 @@
 import "./Calculator.css";
 import Header from "../Header/Header";
 
-const Calculator = () => {
+const Calculator = ({ sourdough }) => {
   return (
     <main>
-      <Header />
+      <Header sourdough={sourdough} />
       <div className="calculator-wrapper">
         <div className="ingredients-wrapper">
           <section className="ingredient starter">

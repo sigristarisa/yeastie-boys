@@ -1,23 +1,37 @@
 import "./NameStarter.css";
+import { useNavigate } from "react-router-dom";
 
-const NameStarter = () => {
+const NameStarter = ({ sourdough, setSourdough }) => {
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSourdough({ ...sourdough, [name]: value });
+  };
+  const submitName = (e) => {
+    e.preventDefault();
+    setSourdough(sourdough);
+    navigate("/calculator");
+  };
+
   return (
     <main className="name-starter">
       <div>
         <h1>
           Hello, there! <br></br> Name your sourdough starter:
         </h1>
-        <div className="name-starter-input-wrapper">
+        <form className="name-starter-input-form" onSubmit={submitName}>
           <input
             className="name-starter-input"
             type="text"
-            name="starter-name"
+            name="starterName"
+            value={sourdough.starterName}
+            onChange={handleChange}
           />
           <div className="name-starter-button-wrapper">
             <input type="submit" value="Go" />
             <input type="submit" value="Skip" />
           </div>
-        </div>
+        </form>
       </div>
     </main>
   );

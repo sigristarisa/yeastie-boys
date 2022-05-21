@@ -14,7 +14,7 @@
   line-height: 36px;
 }
 
-.name-starter-input-wrapper {
+.name-starter-input-form {
   display: grid;
   grid-template-columns: 1fr auto;
   place-items: center;
