@@ -19,9 +19,9 @@ header {
 }
 
 .header--btn-wrapper {
-  width: 20vw;
+  width: 30vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 
