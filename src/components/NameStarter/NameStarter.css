@@ -1,0 +1,50 @@
+.name-starter {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--yellow);
+
+  display: grid;
+  place-items: center;
+}
+
+.name-starter h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 36px;
+}
+
+.name-starter-input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  gap: 8px;
+}
+
+.name-starter-input {
+  width: 360px;
+  height: 64px;
+  padding: 20px;
+  margin: 20px;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 48px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
+}
+
+.name-starter-button-wrapper > input {
+  width: 64px;
+  height: 64px;
+  margin-right: 8px;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 50%;
+  font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
+}
+
+.name-starter-button-wrapper > input:hover {
+  background-color: var(--blue);
+}

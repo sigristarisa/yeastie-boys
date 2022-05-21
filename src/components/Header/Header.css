@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-
 header {
   height: 25vh;
   padding: 36px;
@@ -8,13 +6,10 @@ header {
   align-items: center;
   position: relative;
   z-index: 1;
-
-  /* border: blue solid 1px; */
 }
 
 .logo {
   margin: 0;
-  font-family: "Archivo Black", sans-serif;
   font-size: 24px;
 }
 
@@ -30,8 +25,8 @@ header {
   padding-bottom: 8px;
   background-color: transparent;
   border: none;
-  font-family: "Archivo Black", sans-serif;
   cursor: pointer;
+  font-family: "Archivo Black", sans-serif;
 }
 
 .header--btn-wrapper button:hover {
