@@ -28,7 +28,9 @@ const App = () => {
         />
         <Route
           path="/calculator"
-          element={<Calculator sourdough={sourdough} />}
+          element={
+            <Calculator sourdough={sourdough} setSourdough={setSourdough} />
+          }
         />
         <Route path="/recipe" element={<Recipe />} />
         <Route path="/journal" element={<Recipe />} />

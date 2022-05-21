@@ -4,10 +4,10 @@ import "./Header.css";
 const Header = ({ sourdough }) => {
   return (
     <header>
-      <h1 className="logo">{sourdough.starterName}</h1>
-      <div className="header--btn-wrapper">
+      <h1 className="logo">Let's measure with {sourdough.starterName}</h1>
+      <nav className="header--btn-wrapper">
         <Link to="/">
-          <button>Home</button>
+          <button>Name</button>
         </Link>
         <Link to="/calculator">
           <button>Calculator</button>
@@ -18,7 +18,7 @@ const Header = ({ sourdough }) => {
         <Link to="/journal">
           <button>Journal</button>
         </Link>
-      </div>
+      </nav>
     </header>
   );
 };

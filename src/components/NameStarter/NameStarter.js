@@ -9,6 +9,7 @@ const NameStarter = ({ sourdough, setSourdough }) => {
   };
   const submitName = (e) => {
     e.preventDefault();
+    console.log(sourdough);
     setSourdough(sourdough);
     navigate("/calculator");
   };
@@ -29,7 +30,7 @@ const NameStarter = ({ sourdough, setSourdough }) => {
           />
           <div className="name-starter-button-wrapper">
             <input type="submit" value="Go" />
-            <input type="submit" value="Skip" />
+            {/* <input type="submit" value="Skip" /> */}
           </div>
         </form>
       </div>

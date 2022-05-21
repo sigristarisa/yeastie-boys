@@ -1,7 +1,11 @@
 import "./Calculator.css";
 import Header from "../Header/Header";
 
-const Calculator = ({ sourdough }) => {
+const Calculator = ({ sourdough, setSourdough }) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSourdough({ ...sourdough, [name]: value });
+  };
   return (
     <main>
       <Header sourdough={sourdough} />
@@ -36,8 +40,18 @@ const Calculator = ({ sourdough }) => {
             </div>
           </section>
         </div>
-        <div className="doughweight-wrapper">
-          <input type="number" name="doughweight" />
+        <div className="calculator-footer">
+          <div></div>
+          <form className="doughweight-form">
+            <input
+              id="doughweight"
+              type="number"
+              name="doughweight"
+              placeholder={" doughweight ( g )"}
+              value={sourdough.doughweight}
+            />
+            <input id="doughweight-btn" type="submit" value="→" />
+          </form>
         </div>
       </div>
     </main>
