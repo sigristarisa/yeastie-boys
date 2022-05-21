@@ -7,11 +7,11 @@ import "./index.css";
 
 const initialState = {
   starterName: "",
-  starter: null,
-  water: null,
-  salt: null,
-  flour: null,
-  doughweight: null,
+  starter: "",
+  water: "",
+  salt: "",
+  flour: "",
+  doughweight: "",
 };
 
 const App = () => {
