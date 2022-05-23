@@ -38,7 +38,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/recipe" element={<Recipe sourdoughs={sourdoughs} />} />
+        <Route path="/recipe" element={<Recipe sourdough={sourdough} />} />
         <Route path="/journal" element={<Recipe />} />
       </Routes>
     </div>
