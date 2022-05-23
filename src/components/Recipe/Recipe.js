@@ -91,32 +91,42 @@ const Recipe = ({ sourdough }) => {
           <ul className="step-list">
             <li style={{ opacity: `${step.stepOne}` }}>
               <p>Mix all ingredients</p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepTwo}` }}>
               <p>Wait 30 minutes (autolyse)</p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepThree}` }}>
               <p>Stretch and fold every 15 minutes (total of 4 hours)</p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepFour}` }}>
               <p>Pre-shape the dough</p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepFive}` }}>
               <p>Wait 15 minutes</p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepSix}` }}>
               <p>Shape the dough </p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepSeven}` }}>
               <p>Proof the dough </p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepEight}` }}>
               <p>Proof the loaf (30 minutes) </p>
+              <button>Done</button>
             </li>
             <li style={{ opacity: `${step.stepNine}` }}>
               <p>
-                Bake the loaf (20 minutes with lid, 20 minutes without lid){" "}
+                Bake the loaf <br></br>(20 minutes with lid, 20 minutes without
+                lid){" "}
               </p>
+              <button>Done</button>
             </li>
           </ul>
         </section>
