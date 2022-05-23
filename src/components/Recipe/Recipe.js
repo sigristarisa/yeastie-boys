@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../Header/Header";
+import IngredientList from "../Recipe/IngredientList";
 import "./Recipe.css";
 
 const initialChecked = {
@@ -45,51 +46,12 @@ const Recipe = ({ sourdough }) => {
     <div>
       <Header sourdough={sourdough} />
       <div className="recipe-wrapper">
-        <section className="ingredient-list-wrapper">
-          <h2>Do you have the ingredients?</h2>
-          <ul className="ingredient-list">
-            <li>
-              <input
-                type="checkbox"
-                name="starter"
-                checked={isChecked.starter}
-                onChange={handleChecked}
-              />
-              <p>Sourdough starter</p>
-              <p className="portion-text">{sourdough.starter} g</p>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                name="water"
-                checked={isChecked.water}
-                onChange={handleChecked}
-              />
-              <p>Water</p>
-              <p className="portion-text">{sourdough.water} g</p>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                name="salt"
-                checked={isChecked.salt}
-                onChange={handleChecked}
-              />
-              <p>Salt</p>
-              <p className="portion-text">{sourdough.salt} g</p>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                name="flour"
-                checked={isChecked.flour}
-                onChange={handleChecked}
-              />
-              <p>Flour</p>
-              <p className="portion-text">{sourdough.flour} g</p>
-            </li>
-          </ul>
-        </section>
+        <IngredientList
+          isChecked={isChecked}
+          handleChecked={handleChecked}
+          sourdough={sourdough}
+        />
+
         <section className="step-wrapper">
           <h2 style={{ opacity: `${step.stepOne}` }}>Your Next Steps</h2>
           <ul className="step-list">
