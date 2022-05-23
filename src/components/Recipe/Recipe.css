@@ -1,0 +1,44 @@
+.recipe-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ingredient-list-wrapper {
+  padding: 20vh 36px 0 36px;
+  background-color: var(--grey);
+}
+
+.ingredient-list-wrapper > h2 {
+  font-size: 16px;
+}
+
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient-list li {
+  height: 56px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.ingredient-list p {
+  margin: 0;
+}
+
+.portion-text {
+  text-align: end;
+}

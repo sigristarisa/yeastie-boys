@@ -27,6 +27,7 @@ const NameStarter = ({ sourdough, setSourdough }) => {
             name="starterName"
             value={sourdough.starterName}
             onChange={handleChange}
+            required
           />
           <div className="name-starter-button-wrapper">
             <input type="submit" value="Go" />
