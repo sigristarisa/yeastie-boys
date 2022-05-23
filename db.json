@@ -8,6 +8,15 @@
       "flour": 488,
       "doughweight": "1000",
       "id": 1
+    },
+    {
+      "starterName": "Susie",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 2
     }
   ]
 }

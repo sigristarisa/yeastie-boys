@@ -1,6 +1,7 @@
 import "./Calculator.css";
 import Header from "../Header/Header";
 import Ingredient from "../Calculator/Ingredient";
+import CalculatorFooter from "../Calculator/CalculatorFooter";
 import { useState } from "react";
 
 const initialGoalHeight = {
@@ -22,11 +23,6 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
     fetch(`http://localhost:3000/sourdoughs`, opts)
       .then((res) => res.json())
       .then((newSourdough) => setSourdoughs([...sourdoughs, newSourdough]));
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setSourdough({ ...sourdough, [name]: value });
   };
 
   const calculateGoalHeight = (
@@ -76,11 +72,6 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
     postRequest(newSourdough);
   };
 
-  const submitDoughweight = (e) => {
-    e.preventDefault();
-    calculateWeight(sourdough.doughweight);
-  };
-
   return (
     <main>
       <Header sourdough={sourdough} />
@@ -107,21 +98,11 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
             goalHeight={goalHeight}
           />
         </div>
-        <div className="calculator-footer">
-          <div></div>
-          <form className="doughweight-form" onSubmit={submitDoughweight}>
-            <label htmlFor="#doughweight">Doughweight </label>
-            <input
-              id="doughweight"
-              type="number"
-              name="doughweight"
-              placeholder={"e.g 700 ( g )"}
-              value={sourdough.doughweight}
-              onChange={handleChange}
-            />
-            <input id="doughweight-btn" type="submit" value="→" />
-          </form>
-        </div>
+        <CalculatorFooter
+          sourdough={sourdough}
+          calculateWeight={calculateWeight}
+          setSourdough={setSourdough}
+        />
       </div>
     </main>
   );
