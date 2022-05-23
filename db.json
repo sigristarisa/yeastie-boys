@@ -8,42 +8,6 @@
       "flour": 488,
       "doughweight": "1000",
       "id": 1
-    },
-    {
-      "starterName": "Bobby",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 2
-    },
-    {
-      "starterName": "Bobby",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 3
-    },
-    {
-      "starterName": "",
-      "starter": 247,
-      "water": 370,
-      "salt": 15,
-      "flour": 602,
-      "doughweight": "1234",
-      "id": 4
-    },
-    {
-      "starterName": "Yeastie Boys",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 5
     }
   ]
 }

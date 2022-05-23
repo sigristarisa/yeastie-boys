@@ -1,9 +1,16 @@
-const Ingredient = ({ sourdough }) => {
+const Ingredient = ({ ingredient, sourdough, goalHeight }) => {
   return (
-    <section className="ingredient starter">
+    <section
+      className={`ingredient ${ingredient}`}
+      style={{ height: `${goalHeight[ingredient]}%` }}
+    >
       <div className="portion-wrapper">
-        <div className="icon">i</div>
-        <p className="portion">{sourdough.starter} g</p>
+        <img
+          className="icon"
+          src={`/assets/${ingredient}.png`}
+          alt={`${ingredient}`}
+        />
+        <p className="portion">{sourdough[ingredient]} g</p>
       </div>
     </section>
   );

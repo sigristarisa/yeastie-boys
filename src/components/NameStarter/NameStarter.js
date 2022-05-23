@@ -31,7 +31,6 @@ const NameStarter = ({ sourdough, setSourdough }) => {
           />
           <div className="name-starter-button-wrapper">
             <input type="submit" value="Go" />
-            {/* <input type="submit" value="Skip" /> */}
           </div>
         </form>
       </div>

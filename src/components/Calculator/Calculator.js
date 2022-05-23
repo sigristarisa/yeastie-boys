@@ -1,5 +1,6 @@
 import "./Calculator.css";
 import Header from "../Header/Header";
+import Ingredient from "../Calculator/Ingredient";
 import { useState } from "react";
 
 const initialGoalHeight = {
@@ -85,42 +86,26 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
       <Header sourdough={sourdough} />
       <div className="calculator-wrapper">
         <div className="ingredients-wrapper">
-          <section
-            className="ingredient starter"
-            style={{ height: `${goalHeight.starter}%` }}
-          >
-            <div className="portion-wrapper">
-              <img className="icon" src="/assets/starter.png" alt="starter" />
-              <p className="portion">{sourdough.starter} g</p>
-            </div>
-          </section>
-          <section
-            className="ingredient water"
-            style={{ height: `${goalHeight.water}%` }}
-          >
-            <div className="portion-wrapper">
-              <img className="icon" src="/assets/water.png" alt="water" />
-              <p className="portion">{sourdough.water} g</p>
-            </div>
-          </section>
-          <section
-            className="ingredient salt"
-            style={{ height: `${goalHeight.salt}%` }}
-          >
-            <div className="portion-wrapper">
-              <img className="icon" src="/assets/salt.png" alt="salt" />
-              <p className="portion">{sourdough.salt} g</p>
-            </div>
-          </section>
-          <section
-            className="ingredient flour"
-            style={{ height: `${goalHeight.flour}%` }}
-          >
-            <div className="portion-wrapper">
-              <img className="icon" src="/assets/flour.png" alt="flour" />
-              <p className="portion">{sourdough.flour} g</p>
-            </div>
-          </section>
+          <Ingredient
+            ingredient={"starter"}
+            sourdough={sourdough}
+            goalHeight={goalHeight}
+          />
+          <Ingredient
+            ingredient={"water"}
+            sourdough={sourdough}
+            goalHeight={goalHeight}
+          />
+          <Ingredient
+            ingredient={"salt"}
+            sourdough={sourdough}
+            goalHeight={goalHeight}
+          />
+          <Ingredient
+            ingredient={"flour"}
+            sourdough={sourdough}
+            goalHeight={goalHeight}
+          />
         </div>
         <div className="calculator-footer">
           <div></div>

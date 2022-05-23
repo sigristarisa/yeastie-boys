@@ -6,7 +6,6 @@ const Header = ({ sourdough }) => {
   const [headerText, setHeaderText] = useState("Let's measure with");
 
   const changeHeaderText = (page) => {
-    console.log("hi");
     switch (page) {
       case "calculator":
         setHeaderText("Let's measure with");
