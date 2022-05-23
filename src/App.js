@@ -5,7 +5,7 @@ import Calculator from "./components/Calculator/Calculator";
 import Recipe from "./components/Recipe/Recipe";
 import "./index.css";
 
-const initialState = {
+const initialSourdough = {
   starterName: "",
   starter: "",
   water: "",
@@ -15,7 +15,7 @@ const initialState = {
 };
 
 const App = () => {
-  const [sourdough, setSourdough] = useState(initialState);
+  const [sourdough, setSourdough] = useState(initialSourdough);
 
   return (
     <div className="App">

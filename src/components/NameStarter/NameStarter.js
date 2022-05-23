@@ -18,7 +18,7 @@ const NameStarter = ({ sourdough, setSourdough }) => {
     <main className="name-starter">
       <div>
         <h1>
-          Hello, there! <br></br> Name your sourdough starter:
+          Hello, there! <br></br>What's the name of your sourdough starter?
         </h1>
         <form className="name-starter-input-form" onSubmit={submitName}>
           <input

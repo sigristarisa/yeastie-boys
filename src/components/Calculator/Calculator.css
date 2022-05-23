@@ -13,15 +13,13 @@
   align-items: end;
 }
 
-.doughweight-wrapper {
-  height: 15vh;
-}
-
 .ingredient {
-  height: 60%;
+  /* height: 10%; */
   display: grid;
   justify-content: center;
   align-items: end;
+  position: relative;
+  z-index: -1;
 }
 
 .portion-wrapper {
@@ -35,6 +33,9 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+
+  position: absolute;
+  left: 40px;
 }
 
 .portion {
@@ -64,28 +65,37 @@
 
 .calculator-footer {
   width: 100vw;
+  height: 15vh;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+
+.doughweight-form {
+  margin-right: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
   place-items: center;
 }
 
 #doughweight {
   width: 200px;
   height: 64px;
-  margin: 20px 32px 20px 0;
   padding: 8px 44px 8px 8px;
   color: black;
   background-color: var(--grey);
   border: none;
   border-radius: 48px;
   font-family: "Archivo Black", sans-serif;
+  font-size: 16px;
   text-align: center;
 }
 
 #doughweight-btn {
   width: 44px;
   height: 44px;
-  margin-left: -88px;
+  margin-left: -106px;
   color: white;
   background-color: black;
   border: none;
