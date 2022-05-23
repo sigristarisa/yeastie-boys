@@ -1,9 +1,9 @@
 import Header from "../Header/Header";
 
-const Recipe = () => {
+const Recipe = ({ sourdough }) => {
   return (
     <div>
-      <Header />
+      <Header sourdough={sourdough} />
       Recipe section
     </div>
   );

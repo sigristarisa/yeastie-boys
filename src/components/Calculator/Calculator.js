@@ -1,16 +1,27 @@
 import "./Calculator.css";
 import Header from "../Header/Header";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const initialHeight = {
-  starterHeight: 0,
-  flourHeight: 0,
-  waterHeight: 0,
-  saltHeight: 0,
+const initialGoalHeight = {
+  starter: 0,
+  flour: 0,
+  water: 0,
+  salt: 0,
 };
 
-const Calculator = ({ sourdough, setSourdough }) => {
-  const [goalHeight, setGoalHeight] = useState(initialHeight);
+const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
+  const [goalHeight, setGoalHeight] = useState(initialGoalHeight);
+
+  const postRequest = (sourdough) => {
+    const opts = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(sourdough),
+    };
+    fetch(`http://localhost:3000/sourdoughs`, opts)
+      .then((res) => res.json())
+      .then((newSourdough) => setSourdoughs([...sourdoughs, newSourdough]));
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,12 +39,13 @@ const Calculator = ({ sourdough, setSourdough }) => {
     const flourGoalHeight = (flourWeight / doughweight) * 100;
     const waterGoalHeight = (waterWeight / doughweight) * 100;
     const saltGoalHeight = (saltWeight / doughweight) * 100;
+
     setGoalHeight({
       ...goalHeight,
-      starterHeight: starterGoalHeight,
-      flourHeight: flourGoalHeight,
-      waterHeight: waterGoalHeight,
-      saltHeight: saltGoalHeight,
+      starter: starterGoalHeight,
+      flour: flourGoalHeight,
+      water: waterGoalHeight,
+      salt: saltGoalHeight,
     });
   };
 
@@ -51,13 +63,16 @@ const Calculator = ({ sourdough, setSourdough }) => {
       saltWeight
     );
 
-    setSourdough({
+    const newSourdough = {
       ...sourdough,
       starter: Math.round(starterWeight),
       water: Math.round(waterWeight),
       flour: Math.round(flourWeight),
       salt: Math.round(saltWeight),
-    });
+    };
+
+    setSourdough(newSourdough);
+    postRequest(newSourdough);
   };
 
   const submitDoughweight = (e) => {
@@ -72,17 +87,16 @@ const Calculator = ({ sourdough, setSourdough }) => {
         <div className="ingredients-wrapper">
           <section
             className="ingredient starter"
-            style={{ height: `${goalHeight.starterHeight}%` }}
+            style={{ height: `${goalHeight.starter}%` }}
           >
             <div className="portion-wrapper">
-              <div className="icon">i</div>
+              <img className="icon" src="/assets/starter.png" alt="starter" />
               <p className="portion">{sourdough.starter} g</p>
             </div>
           </section>
-          {/* <Ingredient sourdough={sourdough} /> */}
           <section
             className="ingredient water"
-            style={{ height: `${goalHeight.waterHeight}%` }}
+            style={{ height: `${goalHeight.water}%` }}
           >
             <div className="portion-wrapper">
               <img className="icon" src="/assets/water.png" alt="water" />
@@ -91,7 +105,7 @@ const Calculator = ({ sourdough, setSourdough }) => {
           </section>
           <section
             className="ingredient salt"
-            style={{ height: `${goalHeight.saltHeight}%` }}
+            style={{ height: `${goalHeight.salt}%` }}
           >
             <div className="portion-wrapper">
               <img className="icon" src="/assets/salt.png" alt="salt" />
@@ -100,7 +114,7 @@ const Calculator = ({ sourdough, setSourdough }) => {
           </section>
           <section
             className="ingredient flour"
-            style={{ height: `${goalHeight.flourHeight}%` }}
+            style={{ height: `${goalHeight.flour}%` }}
           >
             <div className="portion-wrapper">
               <img className="icon" src="/assets/flour.png" alt="flour" />

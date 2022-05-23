@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 const NameStarter = ({ sourdough, setSourdough }) => {
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSourdough({ ...sourdough, [name]: value });
   };
   const submitName = (e) => {
     e.preventDefault();
-    console.log(sourdough);
     setSourdough(sourdough);
     navigate("/calculator");
   };

@@ -16,6 +16,7 @@ const initialSourdough = {
 
 const App = () => {
   const [sourdough, setSourdough] = useState(initialSourdough);
+  const [sourdoughs, setSourdoughs] = useState([]);
 
   return (
     <div className="App">
@@ -29,10 +30,15 @@ const App = () => {
         <Route
           path="/calculator"
           element={
-            <Calculator sourdough={sourdough} setSourdough={setSourdough} />
+            <Calculator
+              sourdough={sourdough}
+              setSourdough={setSourdough}
+              sourdoughs={sourdoughs}
+              setSourdoughs={setSourdoughs}
+            />
           }
         />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/recipe" element={<Recipe sourdoughs={sourdoughs} />} />
         <Route path="/journal" element={<Recipe />} />
       </Routes>
     </div>

@@ -1,19 +1,13 @@
 {
-  "posts": [
+  "sourdoughs": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "starterName": "Yeastie Boys",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
