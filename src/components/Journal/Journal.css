@@ -1,0 +1,77 @@
+.journal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-wrapper {
+  padding: 20vh 40px 0 36px;
+  background-color: var(--blue);
+}
+
+.form-wrapper p {
+  font-size: 12px;
+}
+
+.form-wrapper form {
+  height: 70vh;
+  padding: 20px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.input-wrapper {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.ingredient-input-wrapper {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 16px;
+}
+
+.ingredient-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+
+#starter,
+#water,
+#salt,
+#flour {
+  width: 44px;
+  height: 24px;
+}
+
+.submit-btn {
+  width: 96px;
+  height: 44px;
+  color: white;
+  background-color: black;
+  border-radius: 48px;
+  border: none;
+  font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: black;
+  background-color: var(--grey);
+}

@@ -16,7 +16,7 @@ const initialSteps = {
   stepNine: 0.3,
 };
 
-const Recipe = ({ sourdough, setSourdough }) => {
+const Recipe = ({ sourdough, setSourdough, headerText, setHeaderText }) => {
   const [step, setStep] = useState(initialSteps);
 
   const displayFirstStep = (checked) => {
@@ -26,7 +26,11 @@ const Recipe = ({ sourdough, setSourdough }) => {
 
   return (
     <div>
-      <Header sourdough={sourdough} />
+      <Header
+        sourdough={sourdough}
+        headerText={headerText}
+        setHeaderText={setHeaderText}
+      />
       <div className="recipe-wrapper">
         <IngredientList
           sourdough={sourdough}

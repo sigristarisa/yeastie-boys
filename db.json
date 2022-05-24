@@ -1,94 +1,29 @@
 {
   "sourdoughs": [
     {
-      "starterName": "Yeastie Boys",
+      "starterName": "Susan",
+      "doughweight": "1000",
       "starter": 200,
       "water": 300,
-      "salt": 12,
       "flour": 488,
-      "doughweight": "1000",
+      "salt": 12,
+      "date": "2022-05-24",
+      "starterCondition": "Relatively bubbly",
+      "autolyseTime": "30 minutes",
+      "bulkFermentationTime": "4 hours in total",
+      "stretchAndFold": "-2",
+      "shaping": "1",
+      "proofing": "45 minutes",
+      "bakeWithLid": "20 minutes",
+      "bakeWithoutLid": "20 minutes",
+      "ovenSpring": "5",
+      "crust": "3",
+      "crumb": "4",
+      "taste": "Delicious!",
+      "positive": "Everything",
+      "negative": "Nothing",
+      "note": "On track!",
       "id": 1
-    },
-    {
-      "starterName": "",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 2
-    },
-    {
-      "starterName": "",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 3
-    },
-    {
-      "starterName": "",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 4
-    },
-    {
-      "starterName": "",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 5
-    },
-    {
-      "starterName": "",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 6
-    },
-    {
-      "starterName": "Yeastie Boys",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 7
-    },
-    {
-      "starterName": "Yeastie Boys",
-      "starter": 200,
-      "water": 300,
-      "salt": 12,
-      "flour": 488,
-      "doughweight": "1000",
-      "id": 8
-    },
-    {
-      "starterName": "Bobby",
-      "starter": 100,
-      "water": 150,
-      "salt": 6,
-      "flour": 244,
-      "doughweight": "500",
-      "id": 9
-    },
-    {
-      "starterName": "Cacey",
-      "doughweight": "200",
-      "starter": 40,
-      "water": 60,
-      "flour": 98,
-      "salt": 2,
-      "id": 10
     }
   ]
 }

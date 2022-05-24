@@ -11,37 +11,8 @@ const initialGoalHeight = {
   salt: 0,
 };
 
-// const initialHeight = {
-//   starter: 0,
-//   flour: 0,
-//   water: 0,
-//   salt: 0,
-// };
-
-const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
+const Calculator = ({ sourdough, setSourdough, headerText, setHeaderText }) => {
   const [goalHeight, setGoalHeight] = useState(initialGoalHeight);
-  // const [height, setHeight] = useState(initialHeight);
-
-  // let { starter, flour, water, salt } = height;
-  // useEffect(() => {
-  //   if (starter < goalHeight.starter)
-  //     setHeight({ ...height, starter: starter + 1 });
-  //   if (flour < goalHeight.flour) flour++;
-  //   if (water < goalHeight.water) water++;
-  //   if (salt < goalHeight.salt) salt++;
-  //   console.log(starter, flour, water, salt);
-  // }, [starter, flour, water, salt]);
-
-  const postRequest = (sourdough) => {
-    const opts = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(sourdough),
-    };
-    fetch(`http://localhost:3000/sourdoughs`, opts)
-      .then((res) => res.json())
-      .then((newSourdough) => setSourdoughs([...sourdoughs, newSourdough]));
-  };
 
   const calculateGoalHeight = (
     doughweight,
@@ -87,36 +58,35 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
     };
 
     setSourdough(newSourdough);
-    postRequest(newSourdough);
   };
 
   return (
     <main>
-      <Header sourdough={sourdough} />
+      <Header
+        sourdough={sourdough}
+        headerText={headerText}
+        setHeaderText={setHeaderText}
+      />
       <div className="calculator-wrapper">
         <div className="ingredients-wrapper">
           <Ingredient
             ingredient={"starter"}
             sourdough={sourdough}
-            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"water"}
             sourdough={sourdough}
-            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"salt"}
             sourdough={sourdough}
-            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"flour"}
             sourdough={sourdough}
-            // height={height}
             goalHeight={goalHeight}
           />
         </div>

@@ -2,25 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = ({ sourdough }) => {
-  const [headerText, setHeaderText] = useState("Let's measure with");
-
-  const changeHeaderText = (page) => {
-    switch (page) {
-      case "calculator":
-        setHeaderText("Let's measure with");
-        break;
-      case "recipe":
-        setHeaderText("Let's bake with");
-        break;
-      case "journal":
-        setHeaderText("Let's log with");
-        break;
-      default:
-        setHeaderText("");
-    }
-  };
-
+const Header = ({ sourdough, headerText, setHeaderText }) => {
   return (
     <header>
       <h1 className="logo">
@@ -31,15 +13,19 @@ const Header = ({ sourdough }) => {
           <button>Name</button>
         </Link>
         <Link to="/calculator">
-          <button onClick={() => changeHeaderText("calculator")}>
+          <button onClick={() => setHeaderText("Let's measure with")}>
             Calculator
           </button>
         </Link>
         <Link to="/recipe">
-          <button onClick={() => changeHeaderText("recipe")}>Recipe</button>
+          <button onClick={() => setHeaderText("Let's bake with")}>
+            Recipe
+          </button>
         </Link>
         <Link to="/journal">
-          <button onClick={() => changeHeaderText("journal")}>Journal</button>
+          <button onClick={() => setHeaderText("Let's log with")}>
+            Journal
+          </button>
         </Link>
       </nav>
     </header>

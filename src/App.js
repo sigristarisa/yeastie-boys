@@ -7,17 +7,34 @@ import Journal from "./components/Journal/Journal";
 import "./index.css";
 
 const initialSourdough = {
+  date: "",
   starterName: "",
   starter: "",
   water: "",
   salt: "",
   flour: "",
   doughweight: "",
+  starterCondition: "",
+  autolyseTime: "",
+  bulkFermentationTime: "",
+  stretchAndFold: "",
+  shaping: "",
+  proofing: "",
+  bakeWithLid: "",
+  bakeWithoutLid: "",
+  ovenSpring: "",
+  crust: "",
+  crumb: "",
+  taste: "",
+  positive: "",
+  negative: "",
+  note: "",
 };
 
 const App = () => {
   const [sourdough, setSourdough] = useState(initialSourdough);
   const [sourdoughs, setSourdoughs] = useState([]);
+  const [headerText, setHeaderText] = useState("Let's measure with");
 
   return (
     <div className="App">
@@ -34,16 +51,35 @@ const App = () => {
             <Calculator
               sourdough={sourdough}
               setSourdough={setSourdough}
-              sourdoughs={sourdoughs}
-              setSourdoughs={setSourdoughs}
+              headerText={headerText}
+              setHeaderText={setHeaderText}
             />
           }
         />
         <Route
           path="/recipe"
-          element={<Recipe sourdough={sourdough} setSourdough={setSourdough} />}
+          element={
+            <Recipe
+              sourdough={sourdough}
+              setSourdough={setSourdough}
+              headerText={headerText}
+              setHeaderText={setHeaderText}
+            />
+          }
         />
-        <Route path="/journal" element={<Journal sourdough={sourdough} />} />
+        <Route
+          path="/journal"
+          element={
+            <Journal
+              sourdough={sourdough}
+              setSourdough={setSourdough}
+              sourdoughs={sourdoughs}
+              setSourdoughs={setSourdoughs}
+              headerText={headerText}
+              setHeaderText={setHeaderText}
+            />
+          }
+        />
       </Routes>
     </div>
   );
