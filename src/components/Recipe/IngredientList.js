@@ -3,7 +3,7 @@ import IngredientListItem from "../Recipe/IngredientListItem";
 const IngredientList = ({ isChecked, handleChecked, sourdough }) => {
   return (
     <section className="ingredient-list-wrapper">
-      <h2>Do you have the ingredients?</h2>
+      <h2>Do you have all the ingredients?</h2>
       <ul className="ingredient-list">
         <IngredientListItem
           ingredient={"starter"}

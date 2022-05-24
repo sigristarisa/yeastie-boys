@@ -26,7 +26,7 @@
 .ingredient-list li {
   height: 56px;
   padding: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   background-color: white;
 
   display: grid;
@@ -46,6 +46,7 @@
 
 .step-wrapper {
   padding: 20vh 36px 0 36px;
+  position: relative;
 }
 
 .step-list li {
@@ -68,4 +69,56 @@
   border: none;
   font-family: "Archivo Black", sans-serif;
   cursor: pointer;
+}
+
+.step-list button:hover {
+  background-color: var(--blue);
+}
+
+.save-wrapper {
+  width: 440px;
+  height: 280px;
+  padding: 16px;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 48px;
+  position: absolute;
+  left: 16%;
+  top: 32%;
+
+  display: grid;
+  place-items: center;
+}
+
+.save-btn-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.save-btn-wrapper button {
+  width: 96px;
+  height: 44px;
+  border-radius: 48px;
+  border: none;
+  font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
+}
+
+.no-btn {
+  color: black;
+  background-color: white;
+}
+
+.no-btn:hover {
+  background-color: var(--yellow);
+}
+
+.yes-btn {
+  color: white;
+  background-color: black;
+}
+
+.yes-btn:hover {
+  background-color: var(--blue);
 }

@@ -11,8 +11,26 @@ const initialGoalHeight = {
   salt: 0,
 };
 
+// const initialHeight = {
+//   starter: 0,
+//   flour: 0,
+//   water: 0,
+//   salt: 0,
+// };
+
 const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
   const [goalHeight, setGoalHeight] = useState(initialGoalHeight);
+  // const [height, setHeight] = useState(initialHeight);
+
+  // let { starter, flour, water, salt } = height;
+  // useEffect(() => {
+  //   if (starter < goalHeight.starter)
+  //     setHeight({ ...height, starter: starter + 1 });
+  //   if (flour < goalHeight.flour) flour++;
+  //   if (water < goalHeight.water) water++;
+  //   if (salt < goalHeight.salt) salt++;
+  //   console.log(starter, flour, water, salt);
+  // }, [starter, flour, water, salt]);
 
   const postRequest = (sourdough) => {
     const opts = {
@@ -80,21 +98,25 @@ const Calculator = ({ sourdough, setSourdough, sourdoughs, setSourdoughs }) => {
           <Ingredient
             ingredient={"starter"}
             sourdough={sourdough}
+            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"water"}
             sourdough={sourdough}
+            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"salt"}
             sourdough={sourdough}
+            // height={height}
             goalHeight={goalHeight}
           />
           <Ingredient
             ingredient={"flour"}
             sourdough={sourdough}
+            // height={height}
             goalHeight={goalHeight}
           />
         </div>

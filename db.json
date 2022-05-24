@@ -10,7 +10,7 @@
       "id": 1
     },
     {
-      "starterName": "Susie",
+      "starterName": "",
       "starter": 200,
       "water": 300,
       "salt": 12,
@@ -19,13 +19,49 @@
       "id": 2
     },
     {
-      "starterName": "Tommy",
-      "starter": 100,
-      "water": 150,
-      "salt": 6,
-      "flour": 244,
-      "doughweight": "500",
+      "starterName": "",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
       "id": 3
+    },
+    {
+      "starterName": "",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 4
+    },
+    {
+      "starterName": "",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 5
+    },
+    {
+      "starterName": "",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 6
+    },
+    {
+      "starterName": "Yeastie Boys",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 7
     }
   ]
 }

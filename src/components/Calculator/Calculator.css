@@ -14,7 +14,6 @@
 }
 
 .ingredient {
-  /* height: 10%; */
   display: grid;
   justify-content: center;
   align-items: end;
