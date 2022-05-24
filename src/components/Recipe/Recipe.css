@@ -78,7 +78,7 @@
 .save-wrapper {
   width: 440px;
   height: 280px;
-  padding: 16px;
+  padding: 20px;
   background-color: var(--grey);
   border: none;
   border-radius: 48px;
@@ -88,6 +88,15 @@
 
   display: grid;
   place-items: center;
+}
+
+.save-wrapper h2 {
+  font-size: 24px;
+}
+
+.save-wrapper p {
+  font-size: 20px;
+  text-align: center;
 }
 
 .save-btn-wrapper {

@@ -1,6 +1,22 @@
+import { useState } from "react";
 import IngredientListItem from "../Recipe/IngredientListItem";
 
-const IngredientList = ({ isChecked, handleChecked, sourdough }) => {
+const initialChecked = {
+  starter: false,
+  water: false,
+  salt: false,
+  flour: false,
+};
+
+const IngredientList = ({ sourdough, displayFirstStep }) => {
+  const [isChecked, setIsChecked] = useState(initialChecked);
+
+  const handleChecked = (e) => {
+    const { name, checked } = e.target;
+    const checkedIngredients = { ...isChecked, [name]: checked };
+    setIsChecked(checkedIngredients);
+    displayFirstStep(checkedIngredients);
+  };
   return (
     <section className="ingredient-list-wrapper">
       <h2>Do you have all the ingredients?</h2>

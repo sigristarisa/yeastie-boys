@@ -13,6 +13,9 @@ const Header = ({ sourdough }) => {
       case "recipe":
         setHeaderText("Let's bake with");
         break;
+      case "journal":
+        setHeaderText("Let's log with");
+        break;
       default:
         setHeaderText("");
     }
@@ -36,7 +39,7 @@ const Header = ({ sourdough }) => {
           <button onClick={() => changeHeaderText("recipe")}>Recipe</button>
         </Link>
         <Link to="/journal">
-          <button>Journal</button>
+          <button onClick={() => changeHeaderText("journal")}>Journal</button>
         </Link>
       </nav>
     </header>
