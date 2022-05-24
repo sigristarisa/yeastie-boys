@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import NameStarter from "./components/NameStarter/NameStarter";
 import Calculator from "./components/Calculator/Calculator";
 import Recipe from "./components/Recipe/Recipe";
+import Journal from "./components/Journal/Journal";
 import "./index.css";
 
 const initialSourdough = {
@@ -38,8 +39,11 @@ const App = () => {
             />
           }
         />
-        <Route path="/recipe" element={<Recipe sourdough={sourdough} />} />
-        <Route path="/journal" element={<Recipe />} />
+        <Route
+          path="/recipe"
+          element={<Recipe sourdough={sourdough} setSourdough={setSourdough} />}
+        />
+        <Route path="/journal" element={<Journal />} />
       </Routes>
     </div>
   );

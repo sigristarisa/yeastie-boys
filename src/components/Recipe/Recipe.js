@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import IngredientList from "../Recipe/IngredientList";
 import Step from "../Recipe/Step";
@@ -21,12 +22,14 @@ const initialSteps = {
   stepSix: 0.3,
   stepSeven: 0.3,
   stepEight: 0.3,
+  stepNine: 0.3,
 };
 
-const Recipe = ({ sourdough }) => {
+const Recipe = ({ sourdough, setSourdough }) => {
   const [isChecked, setIsChecked] = useState(initialChecked);
   const [step, setStep] = useState(initialSteps);
   const [showSave, setShowSave] = useState(false);
+  const navigate = useNavigate();
 
   const displayFirstStep = (checked) => {
     const { starter, water, salt, flour } = checked;
@@ -41,12 +44,14 @@ const Recipe = ({ sourdough }) => {
   };
 
   const handleDone = (stepNum) => {
-    if (stepNum !== "stepNine") {
-      setStep({ ...step, [stepNum]: 1 });
-    } else {
-      setStep(initialSteps);
-      setShowSave(true);
-    }
+    stepNum
+      ? setStep({ ...step, [stepNum]: 1 })
+      : setStep(initialSteps) || setShowSave(true);
+  };
+
+  const handleNoBtn = () => {
+    setSourdough("");
+    navigate("/");
   };
 
   return (
@@ -113,15 +118,19 @@ const Recipe = ({ sourdough }) => {
               handleDone={handleDone}
               stepText={"Proof the loaf (30 minutes)"}
             />
-
             <Step
               step={step}
               stepNum={"stepEight"}
               nextStepNum={"stepNine"}
               handleDone={handleDone}
-              stepText={
-                "Bake the loaf (20 minutes with lid, 20 minutes withoutlid)"
-              }
+              stepText={"Bake the loaf with lid (20 minutes)"}
+            />
+            <Step
+              step={step}
+              stepNum={"stepNine"}
+              nextStepNum={null}
+              handleDone={handleDone}
+              stepText={"Bake the loaf without lid (20 minutes)"}
             />
           </ul>
           <Modal showSave={showSave}>
@@ -129,8 +138,15 @@ const Recipe = ({ sourdough }) => {
               <h2>Done!</h2>
               <p>Do you want to add this sourdough in your journal?</p>
               <div className="save-btn-wrapper">
-                <button className="no-btn">No</button>
-                <button className="yes-btn">Yes</button>
+                <button className="no-btn" onClick={() => handleNoBtn()}>
+                  No
+                </button>
+                <button
+                  className="yes-btn "
+                  onClick={() => navigate("/journal")}
+                >
+                  Yes
+                </button>
               </div>
             </div>
           </Modal>

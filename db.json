@@ -62,6 +62,24 @@
       "flour": 488,
       "doughweight": "1000",
       "id": 7
+    },
+    {
+      "starterName": "Yeastie Boys",
+      "starter": 200,
+      "water": 300,
+      "salt": 12,
+      "flour": 488,
+      "doughweight": "1000",
+      "id": 8
+    },
+    {
+      "starterName": "Bobby",
+      "starter": 100,
+      "water": 150,
+      "salt": 6,
+      "flour": 244,
+      "doughweight": "500",
+      "id": 9
     }
   ]
 }
