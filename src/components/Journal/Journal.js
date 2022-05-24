@@ -1,5 +1,6 @@
 import Header from "../Header/Header";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../Journal/Journal.css";
 
 const Journal = ({
@@ -55,6 +56,7 @@ const Journal = ({
                 name="date"
                 value={sourdough.date}
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="ingredient-input-wrapper">
@@ -463,9 +465,16 @@ const Journal = ({
           </form>
         </section>
         <section className="entry-wrapper">
-          <ul>
+          <ul className="entry-list">
             {sourdoughs.map((sourdough, index) => {
-              return <li key={index}> {sourdough.date}</li>;
+              return (
+                <li key={index}>
+                  <p>{sourdough.date}</p>
+                  <Link to={`/journal/${sourdough.id}`} state={{ sourdough }}>
+                    <button>See Details</button>
+                  </Link>
+                </li>
+              );
             })}
           </ul>
         </section>

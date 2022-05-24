@@ -3,7 +3,13 @@ import { useNavigate } from "react-router-dom";
 import Step from "../Recipe/Step";
 import Modal from "../Recipe/Modal";
 
-const StepList = ({ step, setStep, setSourdough, initialSteps }) => {
+const StepList = ({
+  step,
+  setStep,
+  setSourdough,
+  initialSteps,
+  setHeaderText,
+}) => {
   const [showSave, setShowSave] = useState(false);
   const navigate = useNavigate();
 
@@ -16,6 +22,11 @@ const StepList = ({ step, setStep, setSourdough, initialSteps }) => {
   const handleNoBtn = () => {
     setSourdough("");
     navigate("/");
+  };
+
+  const handleYesBtn = () => {
+    navigate("/journal");
+    setHeaderText("Let's log with");
   };
   return (
     <section className="step-wrapper">
@@ -98,7 +109,7 @@ const StepList = ({ step, setStep, setSourdough, initialSteps }) => {
             <button className="no-btn" onClick={() => handleNoBtn()}>
               No
             </button>
-            <button className="yes-btn " onClick={() => navigate("/journal")}>
+            <button className="yes-btn " onClick={() => handleYesBtn()}>
               Yes
             </button>
           </div>

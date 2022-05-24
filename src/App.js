@@ -4,6 +4,7 @@ import NameStarter from "./components/NameStarter/NameStarter";
 import Calculator from "./components/Calculator/Calculator";
 import Recipe from "./components/Recipe/Recipe";
 import Journal from "./components/Journal/Journal";
+import ViewDetail from "./components/Journal/ViewDetail";
 import "./index.css";
 
 const initialSourdough = {
@@ -80,6 +81,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/journal/:id" element={<ViewDetail />} />
       </Routes>
     </div>
   );

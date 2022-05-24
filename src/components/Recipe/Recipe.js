@@ -41,6 +41,7 @@ const Recipe = ({ sourdough, setSourdough, headerText, setHeaderText }) => {
           setStep={setStep}
           setSourdough={setSourdough}
           initialSteps={initialSteps}
+          setHeaderText={setHeaderText}
         />
       </div>
     </div>
