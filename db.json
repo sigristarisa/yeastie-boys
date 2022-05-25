@@ -24,6 +24,31 @@
       "negative": "nope",
       "note": "weeeeeee!",
       "id": 1
+    },
+    {
+      "date": "2022-05-25",
+      "starterName": "Bobby",
+      "starter": 300,
+      "water": 450,
+      "salt": 18,
+      "flour": 732,
+      "doughweight": "1500",
+      "starterCondition": "popopo",
+      "autolyseTime": "ilijijlji",
+      "bulkFermentationTime": "jhiuhipuh",
+      "stretchAndFold": "6",
+      "shaping": "2",
+      "proofing": "joiuiou",
+      "bakeWithLid": "iuoiu",
+      "bakeWithoutLid": "oiuioui",
+      "ovenSpring": "1",
+      "crust": "3",
+      "crumb": "2",
+      "taste": "uoiuio",
+      "positive": "oiuoiu",
+      "negative": "oiuoiu",
+      "note": "oiuoiuiou",
+      "id": 2
     }
   ]
 }
