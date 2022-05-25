@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 const EntryList = ({ sourdoughs }) => {
+  sourdoughs.sort((a, b) => {
+    const dateB = b.date.replace(/-/g, "");
+    const dateA = a.date.replace(/-/g, "");
+    return dateB - dateA;
+  });
+
   return (
     <section className="entry-wrapper">
       <ul className="entry-list">
