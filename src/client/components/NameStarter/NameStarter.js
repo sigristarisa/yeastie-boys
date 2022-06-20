@@ -8,9 +8,19 @@ const NameStarter = ({ sourdough, setSourdough }) => {
     const { name, value } = e.target;
     setSourdough({ ...sourdough, [name]: value });
   };
+
   const submitName = (e) => {
     e.preventDefault();
-    setSourdough(sourdough);
+    const opts = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(sourdough),
+    };
+
+    fetch(`http://localhost:3030/sourdough`, opts)
+      .then((res) => res.json())
+      .then((data) => setSourdough(data.createdSourdough));
+
     navigate("/calculator");
   };
 

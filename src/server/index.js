@@ -1,20 +1,30 @@
-//Include the express library
+// Load our .env file
+require("dotenv").config();
+
+// Import express and cors
 const express = require("express");
-//Include the morgan middleware
-const morgan = require("morgan");
-//Include the cors middleware
 const cors = require("cors");
 
-//Create a new express application
+// Set up express
 const app = express();
-
-//Tell express we want to use the morgan library
-app.use(morgan("dev"));
-//Tell express we want to use the cors library
+app.disable("x-powered-by");
 app.use(cors());
+// Tell express to use a JSON parser middleware
+app.use(express.json());
+// Tell express to use a URL Encoding middleware
+app.use(express.urlencoded({ extended: true }));
 
-//Start up our server
-const port = 3030;
+const sourdoughRouter = require("./routers/sourdough");
+app.use("/sourdough", sourdoughRouter);
+
+// Set up a default "catch all" route to use when someone visits a route
+// that we haven't built
+app.get("*", (req, res) => {
+  res.json({ ok: true });
+});
+
+// Start our API server
+const port = process.env.PORT || 3030;
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}/`);
+  console.log(`\n Server is running on http://localhost:${port}\n`);
 });
