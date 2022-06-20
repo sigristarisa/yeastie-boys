@@ -5,7 +5,7 @@ import Calculator from "./components/Calculator/Calculator";
 import Recipe from "./components/Recipe/Recipe";
 import Journal from "./components/Journal/Journal";
 import ViewDetail from "./components/Journal/ViewDetail";
-import "./index.css";
+import "../index.css";
 
 const initialSourdough = {
   date: "",
